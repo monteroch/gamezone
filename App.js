@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import * as Font from 'expo-font';
 import { StyleSheet, Text, View } from 'react-native';
-import Home from './screens/home';
+import { Home } from './screens/Home';
 import { AppLoading } from 'expo'
+import Navigator from './routes/homeStack';
 
 const getFonts = () => Font.loadAsync({
   'ptsans-regular': require('./assets/fonts/PTSans-Regular.ttf'),
@@ -15,7 +16,7 @@ export default function App() {
 
   if(fontsLoaded){
     return (
-      <Home/>
+      <Navigator/>
     );
   }else{
     return(
